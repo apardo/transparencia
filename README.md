@@ -11,20 +11,21 @@ git clone https://github.com/AyuntamientoMadrid/transparencia.git
 cd transparencia
 bundle install
 cp config/database.yml.example config/database.yml
-bin/rake db:setup
-RAILS_ENV=test bin/rake db:setup
+cp config/secrets.yml.example config/secrets.yml
+bundle exec rake db:setup
+RAILS_ENV=test bundle exec rake db:setup
 ```
 
 Para ejecutar la aplicación en local:
 
 ```
-bin/rails s
+bundle exec bundle rails server
 ```
 
 Para ejecutar los tests:
 
 ```
-bin/rspec
+bundle exec rspec
 ```
 
 ## Organización
@@ -41,6 +42,3 @@ También puedes contactar a alguno de los responsables técnicos:
 * Enrique García ([@otikik](https://twitter.com/otikik))
 * Juanjo Bazán ([@xuanxu](https://twitter.com/xuanxu))
 * Alberto García ([@decabeza](https://twitter.com/decabeza))
-
-
-
